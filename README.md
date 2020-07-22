@@ -21,6 +21,5 @@ Front end instructions
 4. If not automatically opened, on your browser, navigate to localhost:3001
 
 The following are sample username/passwords for testing: (you can also register your own users)
-User: mehrdad@gmail.com, Pass: 123456
-User: jackjack@yahoo.com, Pass: 123456
-User: mary@gmail.com, Pass: 123456
+Usernames: mehrdad@gmail.com, jackjack@yahoo.com, mary@gmail.com
+Use password 123456 for all the above usernames to login.
