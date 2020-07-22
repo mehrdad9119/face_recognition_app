@@ -1,0 +1,26 @@
+version: '3.6'
+
+services:
+    #backend server
+    face-recognition-api:
+      container_name: backend
+      build: ./
+      command: npm start
+      working_dir: /usr/src/face-recogniton-api
+      environment: 
+        POSTGRES_URI: postgres://mehrdad:123456@postgres:5432/face-recognition-docker
+      ports: 
+        - "3000:3000"
+      volumes:
+        - ./:/usr/src/face-recogniton-api
+    
+    #Postgres
+    postgres:
+      environment: 
+        POSTGRES_USER: mehrdad
+        POSTGRES_PASSWORD: 123456
+        POSTGRES_DB: face-recognition-docker
+        POSTGRES_HOST: postgres
+      build: ./postgres
+      ports: 
+        - "5432:5432"

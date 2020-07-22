@@ -2,6 +2,10 @@
   "name": "node",
   "version": "1.0.0",
   "main": "script.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mehrdad9119/face_recognition_app"
+  },
   "scripts": {
     "start": "nodemon server.js"
   },
@@ -15,6 +19,7 @@
     "cors": "^2.8.4",
     "express": "^4.16.2",
     "knex": "^0.19.5",
+    "morgan": "^1.10.0",
     "pg": "^7.4.0"
   },
   "devDependencies": {
