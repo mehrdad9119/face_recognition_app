@@ -7,11 +7,13 @@
     "url": "https://github.com/mehrdad9119/face_recognition_app"
   },
   "dependencies": {
+    "bootstrap": "^4.5.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-particles-js": "^2.1.0",
     "react-scripts": "^3.4.1",
     "react-tilt": "^0.1.4",
+    "reactstrap": "^8.5.1",
     "tachyons": "^4.9.0"
   },
   "scripts": {
