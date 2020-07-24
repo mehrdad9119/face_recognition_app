@@ -9,6 +9,7 @@ services:
       working_dir: /usr/src/face-recogniton-api
       environment: 
         POSTGRES_URI: postgres://mehrdad:123456@postgres:5432/face-recognition-docker
+        REDIS_URI: redis://redis:6379
       ports: 
         - "3000:3000"
       volumes:
@@ -24,3 +25,9 @@ services:
       build: ./postgres
       ports: 
         - "5432:5432"
+
+    #Redis
+    redis:
+      image: redis
+      ports: 
+        - "6379:6379"
