@@ -1,5 +1,6 @@
 import React from 'react';
 import './Signin.css';
+import getUserData from '../../utils/getUserData';
 
 class Signin extends React.Component {
   constructor(props) {
@@ -18,6 +19,10 @@ class Signin extends React.Component {
     this.setState({signInPassword: event.target.value})
   }
 
+  saveAuthTokenInSession = (token) => {
+    window.sessionStorage.setItem('token', token);
+  }
+
   onSubmitSignIn = () => {
     fetch('http://localhost:3000/signin', {
       method: 'post',
@@ -28,10 +33,14 @@ class Signin extends React.Component {
       })
     })
       .then(response => response.json())
-      .then(user => {
-        if (user.id) {
-          this.props.loadUser(user)
-          this.props.onRouteChange('home');
+      .then(data => {
+        if (data.userId && data.success === 'true') {
+          this.saveAuthTokenInSession(data.token);
+          getUserData(data.userId, data.token)
+          .then(user => {
+            this.props.loadUser(user);
+            this.props.onRouteChange('home');
+          })         
         }
       })
   }
