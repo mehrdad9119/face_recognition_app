@@ -22,4 +22,4 @@ Front end instructions
 
 The following are sample username/passwords for testing: (you can also register your own users)
 Usernames: mehrdad@gmail.com, jackjack@yahoo.com, mary@gmail.com
-Use password 123456 for all the usernames to login.
+Use password "HUCISC" for all the usernames to login.
