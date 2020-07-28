@@ -18,7 +18,7 @@ Front end instructions
 1. Make sure you are in the packages/front-end directory
 2. Run `npm install`
 3. Run `npm start`
-4. If not automatically opened, on your browser, navigate to localhost:3001
+4. If not automatically opened, on your browser, navigate to localhost:5000
 
 The following are sample username/passwords for testing: (you can also register your own users)
 Usernames: mehrdad@gmail.com, jackjack@yahoo.com, mary@gmail.com
