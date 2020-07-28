@@ -25,7 +25,7 @@ class ProfileIcon extends React.Component {
             aria-expanded={this.state.dropdownOpen}
           >        
             <img
-                src="http://tachyons.io/img/logo.jpg"
+                src="https://i7.pngguru.com/preview/536/90/375/computer-icons-user-profile-login-avatar-description.jpg"
                 className="br4 h3 w3 dib" alt="avatar" />          
           </DropdownToggle>
           <DropdownMenu
