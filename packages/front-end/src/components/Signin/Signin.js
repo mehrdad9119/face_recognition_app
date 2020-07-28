@@ -1,6 +1,6 @@
 import React from 'react';
-import './Signin.css';
 import getUserData from '../../utils/getUserData';
+import './Signin.css';
 
 class Signin extends React.Component {
   constructor(props) {
@@ -41,8 +41,11 @@ class Signin extends React.Component {
             this.props.loadUser(user);
             this.props.onRouteChange('home');
           })         
+        } else {
+          window.alert('Wrong Credentials!');
         }
       })
+      .catch(err => console.log(err));
   }
 
   render() {

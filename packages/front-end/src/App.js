@@ -101,7 +101,7 @@ class App extends Component {
   displayFaceBox = (box) => {
     if (box) {
       this.setState({box: box});
-    }   
+    }
   }
 
   onInputChange = (event) => {
@@ -143,11 +143,15 @@ class App extends Component {
         }
         this.displayFaceBox(this.calculateFaceLocation(response))
       })
-      .catch(err => console.log(err));
+      .catch(err => {
+        this.setState({box: {}});
+        console.log(err)
+      });
   }
 
   onRouteChange = (route) => {
     if (route === 'signout') {
+      window.sessionStorage.removeItem('token');
       return this.setState(initialState)
     } else if (route === 'home') {
       this.setState({isSignedIn: true})
